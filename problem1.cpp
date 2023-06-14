@@ -35,13 +35,17 @@ int findMinimumEnergyLevel(const std::vector<int>& energyLevels, int capacity) {
 
 int main(int argc, char *a[])
 {
-  std::vector<int> energyLevels = {1, 3, 2, 4, 5};
-    int capacity = 4;
+     int N, X;
+    std::cin >> N >> X;
 
-    int minimumEnergyLevel = findMinimumEnergyLevel(energyLevels, capacity);
+    std::vector<int> energyLevels(N);
+    for (int i = 0; i < N; i++)
+        std::cin >> energyLevels[i];
+
+    int minimumEnergyLevel = findMinimumEnergyLevel(energyLevels, X);
 
     if (minimumEnergyLevel == -1)
-        std::cout  << capacity <<std::endl;
+        std::cout << X << std::endl;
     else
         std::cout << minimumEnergyLevel << std::endl;
 
